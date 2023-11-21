@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>Incluir Novo Cliente</button>
+    <router-link to="/customers/create">Incluir Novo Cliente</router-link> 
     <h1>Lista de Clientes</h1>
     <table class="table table-striped" v-if="data._embedded">
       <thead>
