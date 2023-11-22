@@ -33,7 +33,6 @@ const create = async () => {
         .then(response => {
             alert('Dados cadastrados com sucesso!')
             router.push('/customers')
-            
         })
         .catch(error => {
             alert('Erro ao cadastrar!')

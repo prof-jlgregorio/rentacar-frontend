@@ -40,7 +40,7 @@
               <div>
                 <button
                   v-if="data._links.prev"
-                  @click="getCustomersHateOas(data._links.first.href)"
+                  @click="getCustomersHateOas(data._links.prev.href)"
                 >
                   Anterior
                 </button>
@@ -91,6 +91,7 @@ const getCustomers = async (page = 0, size = 10, sortBy = 'firstName') => {
     })
 }
 
+//use the hateoas links
 const getCustomersHateOas = async link => {
   await axios
     .get(link)
